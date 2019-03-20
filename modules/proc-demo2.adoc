@@ -1,0 +1,11 @@
+// Module included in the following assemblies:
+//
+// This is a shared mw module
+
+[id='proc-demo-{context}']
+= Demo content
+
+.Procedure
+
+. Just do it
+. Everyone will be happy
