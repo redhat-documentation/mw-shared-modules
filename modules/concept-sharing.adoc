@@ -5,4 +5,4 @@
 [id='concept-sharing-{context}']
 = Sharing
 
-Sharing is a good thing. Always share!
+Sharing is a good thing. Always share! It's the Red Hat way!
