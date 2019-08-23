@@ -1,0 +1,77 @@
+// Metadata created by nebel
+//
+// ParentAssemblies: assemblies/prometheus/as_prometheus-openshift.adoc
+
+[id='prometheus-set-up']
+= Setting up Prometheus
+To set up Prometheus, install the Prometheus operator custom resource definition on the cluster and then add Prometheus to an OpenShift project that includes a {prodname} application.
+
+.Prerequisites
+
+* You have `cluster admin` access to the OpenShift cluster.
+
+* You have prepared the OpenShift cluster by installing the {prodname} on OpenShift images and templates as described in the link:{LinkFISGuide}[{NameOfFISGuide}].
+
+* You have created an OpenShift project on the cluster and added a {prodname} application to it.
+
+.Procedure
+
+.  Login to OpenShift with administrator permissions:
++
+----
+$ oc login -u system:admin
+----
+
+. Install the custom resource definitions necessary for running the Prometheus operator, where `{$templates-base-url}` is the location of the {prodname} on OpenShift template files:
++
+----
+$ oc create -f {$templates-base-url}\fuse-prometheus-crd.yml
+----
++
+The Prometheus operator is now available to any namespace on the cluster. 
+
+. Install the Prometheus operator to your namespace by using the following command syntax:
++
+----
+$ oc process -f {$templates-base-url}/fuse-prometheus-operator.yml -p NAMESPACE=<YOUR NAMESPACE> | oc create -f -
+----
++
+For example, use this command for a project (namespace) named *myproject*:
++
+----
+oc process -f {$templates-base-url}/fuse-prometheus-operator.yml -p NAMESPACE=myproject | oc create -f -
+----
++
+[NOTE]
+====
+The first time that you install the Prometheus operator into a namespace, it might take a few minutes for the Prometheus resource pods to start. Subsequently, if you install it to other namespaces on your cluster, the Prometheus resource pods start much faster.
+====
+
+. Instruct the Prometheus operator to monitor the {prodname} application in the project by using the following command syntax::
++
+----
+$ oc process -f {$templates-base-url}/fuse-servicemonitor.yml -p NAMESPACE=<YOUR NAMESPACE> -p FUSE_SERVICE_NAME=<YOUR FUSE SERVICE> | oc apply -f -
+----
++
+For example, use this command for an OpenShift project (namespace) named *myproject* that includes a {prodname} application named *myfuseapp*:
++
+----
+oc process -f {$templates-base-url}/fuse-servicemonitor.yml -p NAMESPACE=myproject -p FUSE_SERVICE_NAME=myfuseapp | oc apply -f -
+----
+
+. To open the Prometheus dashboard:
+
+.. Login to the OpenShift console.
+
+.. Open the project to which you added Prometheus.
+
+.. In the left pane, select *Applications* -> *Routes*.
++
+image:images/prometheus/prometheus_route.png[]
+
+.. Click the Prometheus Hostname URL to open the Prometheus dashboard in a new browser tab or window.
++
+image:images/prometheus/prometheus_dashboard.png[]
+
+.. For information about getting started with Prometheus, go to: https://prometheus.io/docs/prometheus/latest/getting_started/
+
