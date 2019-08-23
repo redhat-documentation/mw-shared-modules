@@ -1,8 +1,0 @@
-// Module included in the following assemblies:
-//
-// This is a shared mw module
-
-[id='concept-sharing-{context}']
-= Sharing
-
-Sharing is a good thing. Always share! It's the Red Hat way!
