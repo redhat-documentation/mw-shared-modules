@@ -1,0 +1,117 @@
+// Metadata created by nebel
+//
+// ParentAssemblies: assemblies/prometheus/as_prometheus-fuseonline.adoc
+
+[id='prometheus-fuseonline-infra']
+= Monitoring {prodnamefuseonline} infrastructure components
+
+You can use Prometheus to monitor the metrics exposed by the following {prodnamefuseonline} infrastructure components:
+
+Syndesis Server:: The `syndesis-server` component has been instrumented with Micrometer and exposes all of the JVM metrics Micrometer automatically by default. Additionally, `syndesis-server` exposes metrics about the REST API endpoints, such as request rate, error rate, and latency.
+
+Syndesis Meta:: The `syndesis-meta` component has been instrumented with Micrometer and exposes all of the JVM metrics Micrometer automatically by default. It also exposes metrics about its REST API endpoints.
+
+Syndesis DB:: Metrics for the {prodnamefuseonline} Postgres database are exported using a third-party Prometheus exporter. 
+
+Integrations:: The `integration` metrics are exported using the official JMX exporter, which exposes several JVM metrics by default. Additionally, integration metrics expose metrics that are specific to Apache Camel, such as message rate and error rate.
+
+You can also use a Grafana dashboard to visualize the metrics gathered by Prometheus.
+
+.Prerequisites
+
+* You have `cluster admin` access to the OpenShift cluster.
+
+* Deploy Prometheus and Grafana with the Application Monitoring operator by following https://github.com/integr8ly/application-monitoring-operator/blob/master/README.md[these installation instructions]. 
+
+====
+[NOTE]
+
+Grafana is a community-supported feature. Deploying Grafana to monitor {integrationprodnamefull} products is not supported with Red Hat production service level agreements (SLAs).
+
+====
+
+.Procedure
+
+. In the {prodnamefuseonline} namespace, set the `monitoring-key=middleware` label by using the following command:
++
+----
+oc label namespace <fuse-online-namespace> monitoring-key=middleware
+----
+
+. Verify that your {prodnamefuseonline} installation added the application monitoring configuration resources to the OpenShift cluster:
+
+.. In the OpenShift web console, go to the `applicaton-monitoring` project and then open the `prometheus-route` URL.
+.. In the Prometheus console, go to the *Status* -> *Targets* page.
++
+If a `Syndesis` target is listed, then {prodnamefuseonline} is configured for monitoring and you can skip to Step 4.
++
+If a `Syndesis` target is not listed, continue to Step 3.
+
+. If the infrastructure resources are not on the OpenShift cluster:
+
+.. Go to the {prodnamefuseonline} namespace:
++
+----
+oc project <fuse-online-namespace>
+----
+
+.. Install the infrastructure resources by using the following commands:
++
+[options="nowrap"]
+----
+
+BASEURL=https://raw.githubusercontent.com/syndesisio/syndesis/1.7.x/install/addons
+
+for ADDON in syndesis-db-dashboard.yml \
+  syndesis-db-prometheus-rule.yml \
+  syndesis-db-servicemonitor.yml \
+  syndesis-jvm-dashboard.yml \
+  syndesis-meta-servicemonitor.yml \
+  syndesis-rest-api-dashboard.yml \
+  syndesis-rest-api-prometheus-rule.yml \
+  syndesis-server-servicemonitor.yml
+do
+  oc create -f ${BASEURL}/${ADDON}
+done
+
+----
++
+====
+[NOTE]
+The infrastructure resources are not available immediately after you run the install commands. You might need to wait before you can see the {prodnamefuseonline} (Syndesis) targets in the *Prometheus Targets* page.
+
+====
+
+. To access Prometheus:
+
+.. In the OpenShift console for the project where the application monitoring operator is installed, open the list of routes.
+
+.. Next to the *prometheus-route* entry, click the hostname URL to open the Prometheus console.
+
+.. To view a list of the alert rules configured for {prodnamefuseonline} infrastructure components, click the *Alerts* menu item.
+
+. To access Grafana dashboards:
+
+.. In the OpenShift console for the project where the application monitoring operator is installed, open the list of routes.
+
+.. Next to the *grafana-route* entry, click the hostname URL to open the Grafana console.
+
+.. At the top of the Grafana console, click the dashboard selector and then select one of the following infrastructure dashboards:
++
+Infrastructure - DB:: Displays metrics related to the {prodnamefuseonline} Postgres instance.
+
+Infrastructure - JVM:: Displays metrics about the running JVM for the `syndesis-meta` or `syndesis-server` applications. Chose the application that you want to monitor from the *Application* drop down list at the top of the dashboard.
+
+Infrastructure - REST APIs:: Displays metrics relating to the {prodnamefuseonline} infrastructure API endpoints, such as `request throughput` and `latency`. Chose the application that you want to monitor from the *Application* drop down list at the top of the dashboard.
+
+. To access Prometheus Alertmanager:
+
+.. In the OpenShift console for the project where the application monitoring operator is installed, open the list of routes.
+
+.. Next to the *alertmanager-route* entry, click the hostname URL to open the Alertmanager console.
++
+If the {prodnamefuseonline} infrastructure is healthy, the default view is empty.
++
+If any of the infrastructure components are unhealthy, any active alerts that have been fired are listed, along with the option to silence them.
+
+

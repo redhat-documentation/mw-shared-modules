@@ -1,0 +1,30 @@
+// ParentAssemblies: master.adoc
+
+[id='prometheus-overview']
+= About Prometheus
+
+[IMPORTANT]
+====
+Prometheus is an open-source systems monitoring toolkit that you can use to monitor various aspects of {integrationprodnamefull} products deployed in the Red Hat OpenShift environment. Red Hat support for Prometheus is limited to the setup and configuration recommendations provided in Red Hat product documentation.
+====
+
+Prometheus is container-native software built for storing historical data and for monitoring large, scalable systems, including {integrationprodnamefull}. You can use Prometheus to monitor and store {prodname} on OpenShift data by exposing endpoints to Prometheus format. Prometheus gathers data over an extended time, rather than just for the currently running session. Prometheus stores the data so that you can use a graphical tool, such as Grafana, to visualize and run queries on the data. 
+ 
+You can use Prometheus to monitor:
+
+ {prodname} applications on OpenShift::
+  {prodname} on OpenShift is the distribution of {prodname} for running integration applications on OpenShift (supported on the Red Hat Enterprise Linux operating system). You can use Prometheus on an on-premise OpenShift cluster or on a single-node cluster, such as Minishift or the Red Hat Container Development Kit. For more information about {prodname} on OpenShift, see  link:{LinkFISGuide}[{NameOfFISGuide}].
+
+{prodnamefuseonline} infrastructure components and {prodnamefuseonline} integration applications::
+{prodnamefuseonline} is the distribution of {prodname} for non-expert integrators with a simplified workflow accessed through a browser based UI. For more information about {prodnamefuseonline}, see link:{LinkFuseOnlineIntegrationGuide}[{NameOfFuseOnlineIntegrationGuide}].
+
+[NOTE]
+====
+* Using Prometheus to monitor {prodname} applications on OpenShift Online is not supported.
+* Grafana is a community-supported feature. Deploying Grafana to monitor {integrationprodnamefull} products is not supported with Red Hat production service level agreements (SLAs).
+
+====
+
+.Additional resources
+
+For information on installing and developing with {prodnamefull} on OpenShift, see the link:{LinkFISGuide}[{NameOfFISGuide}].

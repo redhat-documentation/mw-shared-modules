@@ -1,0 +1,35 @@
+// Metadata created by nebel
+//
+// ParentAssemblies: assemblies/prometheus/as_prometheus-extconfig-fuseonline.adoc
+
+[id='prometheus-extconfig-operator']
+= Configuring a Prometheus instance (with the Prometheus operator)
+
+If you installed a Prometheus instance by using the Prometheus operator, updating your external Prometheus configuration to monitor {prodnamefuseonline} integration involves adding and then editing a service monitor. 
+
+.Prerequisite
+
+You installed Prometheus as described in <<prometheus-set-up>>.
+
+.Procedure
+
+. In a terminal window, add a service monitor to the namespace (project) in which you installed Prometheus:
++
+----
+oc process -f  {$templates-base-url}/fuse-servicemonitor.yml -p NAMESPACE=<YOUR-NAMESPACE> -p FUSE_SERVICE_NAME=fuseonline | oc create -f -
+----
+
+. In the OpenShift console, open the project and then select *Applications* -> *Services*.
+
+. Click the *fuseonline* service and then select *Actions* -> *Edit YAML*.
+
+. In the Editor, change the selector section of the YAML file by replacing `app: fuseonline` with `syndesis.io/type: integration`. 
+
+. Click *Save*.
+
+The Prometheus operator updates its configuration to monitor all {prodnamefuseonline} integrations. 
+
+You can now view {prodnamefuseonline} integrations in the Prometheus instance. The following example shows a Prometheus instance that monitors two integrations:
+
+image:images/prometheus/prometheus_targets.png[] 
+

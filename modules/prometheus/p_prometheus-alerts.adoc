@@ -1,0 +1,11 @@
+// Metadata created by nebel
+//
+// ParentAssemblies: assemblies/prometheus/as_prometheus-openshift.adoc
+
+[id='prometheus-alerts']
+= Generating alerts
+
+//not much here and it is old - need to get better information
+For an example of using Prometheus for OpenShift to generate alerts, see the Red Hat Cloud Forms _Monitoring, Alerts, and Reporting_ guide:
+
+`https://access.redhat.com/documentation/en-us/red_hat_cloudforms/4.7/html/monitoring_alerts_and_reporting/integrating_prometheus_alerts`

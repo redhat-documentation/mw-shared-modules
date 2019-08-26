@@ -1,0 +1,39 @@
+// Metadata created by nebel
+//
+// ParentAssemblies: assemblies/prometheus/as_prometheus-openshift.adoc
+
+[id='prometheus-env-vars']
+= OpenShift environment variables
+
+To configure your application's Prometheus instance, you can set the OpenShift environment variables listed in xref:PrometheusEnvVarsTbl[].
+
+[[PrometheusEnvVarsTbl]]
+.Prometheus Environment Variables
+[options="header"]
+|===
+| Environment Variable | Description | Default
+a| `AB_PROMETHEUS_HOST` 
+a| The host address to bind.
+a| `0.0.0.0`
+
+a| `AB_PROMETHEUS_OFF`
+a| If set, disables the activation of Prometheus (echoes an empty value). 
+a| Prometheus is enabled.
+
+a| `AB_PROMETHEUS_PORT`
+a| The Port to use.
+a| `9779`
+
+a| `AB_JMX_EXPORTER_CONFIG`
+a| Uses the file (including path) as the Prometheus configuration file.
+a| The /opt/prometheus/prometheus-config.yml file with Camel metrics.
+
+a| `AB_JMX_EXPORTER_OPTS`
+a| Additional options to append to the JMX exporter configuration.
+a| Not applicable.
+|===
+
+
+.Additional resources
+
+For information on setting environment variables for a pod, see the _OpenShift Developer Guide_  (https://access.redhat.com/documentation/en-us/openshift_container_platform/3.11/html/developer_guide/).
