@@ -15,11 +15,11 @@ Before you can share a module, you must prepare it for reuse. This ensures that 
 
 * In the module, add a comment at the top indicating your GitHub user name and the book in which the module is used. For example:
 
- ```
- // Module included in the following:
- //
- // @bhardesty - Deploying AMQ Interconnect on OpenShift
-```
+   ```
+   // Module included in the following:
+   //
+   // @bhardesty - Deploying AMQ Interconnect on OpenShift
+  ```
 
 ### Creating a PR to add shared modules
 
@@ -31,7 +31,7 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 
     b. Add your modules to the directory that you created.
 
-    c. Add a README.md file and describe how the set of modules should be used.
+    c. Add a `README.md` file and describe how the set of modules should be used.
 
       * List any attributes that the modules use.
       * Describe how the modules should be included. At a minimum, define the order in which the modules should be included.
@@ -41,8 +41,8 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 2. Wait. The PR will be reviewed and, once approved, merged.
 
 3. After the PR is merged:
-  * Update your book to point to the module. For more information, see #reusing-a-shared-module.
 
+  * Update your book to point to the module. For more information, see #reusing-a-shared-module.
   * If necessary, notify other Middleware writers about the shared module so that others can use it.
 
 TODO: describe how to share a module that includes images
@@ -59,18 +59,17 @@ Making a change to a shared module impacts every book in which the module is use
 
 ## Reusing a shared module
 
-1. In the assembly in which the module should be used, include the module using the URL of the module's location.
+1. In the assembly in which the module should be used, include the module using the URL of the module's location. For example, to point to the _What operators are_ module:
 
-  For example, to point to the _What operators are_ module:
-  ```
-  include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
-  ```
+   ```
+   include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
+   ```
 
 2. If the shared module uses any attributes, define them in the assembly in which you included the module.
 
-  For example, say the shared module uses an attribute called `:ProdName:` to represent the product name, but your book already uses a different attribute (say, `:ProductName:`) for the same thing. To use the shared module, you would add `:ProdName:` and set it to the value of `:ProductName:`:
+   For example, say the shared module uses an attribute called `:ProdName:` to represent the product name, but your book already uses a different attribute (say, `:ProductName:`) for the same thing. To use the shared module, you would add `:ProdName:` and set it to the value of `:ProductName:`:
 
-  ```
-  :ProdName: {ProductName}
-  include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
-  ```   
+   ```
+   :ProdName: {ProductName}
+   include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
+   ```   
