@@ -6,8 +6,8 @@ This repo contains modules that can be shared across Red Hat Middleware product 
 
 You can share either a single module, or a set of modules that can (or should) be reused together - such as in an assembly. To share a single module or a set of modules:
 
-1. Prepare the module (or modules) for reuse.
-2. Create a PR for the module (or modules).
+1. [Prepare the module (or modules) for reuse](#preparing-a-module-for-reuse).
+2. [Create a PR for the module (or modules)](#creating-a-pr-to-add-shared-modules).
 
 ### Preparing a module for reuse
 
@@ -42,7 +42,7 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 
 3. After the PR is merged:
 
-  * Update your book to point to the module. For more information, see #reusing-a-shared-module.
+  * Update your book to point to the module. For more information, see [Reusing a shared module](#reusing-a-shared-module).
   * If necessary, notify other Middleware writers about the shared module so that others can use it.
 
 TODO: describe how to share a module that includes images
