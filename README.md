@@ -42,8 +42,8 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 
 3. After the PR is merged:
 
-  * Update your book to point to the module. For more information, see [Reusing a shared module](#reusing-a-shared-module).
-  * If necessary, notify other Middleware writers about the shared module so that others can use it.
+   * Update your book to point to the module. For more information, see [Reusing a shared module](#reusing-a-shared-module).
+   * If necessary, notify other Middleware writers about the shared module so that others can use it.
 
 TODO: describe how to share a module that includes images
 
