@@ -38,7 +38,7 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 
 2. Create a PR to add the module.
 
-2. Wait. The PR will be reviewed and, once approved, merged.
+3. Wait. The PR will be reviewed and, once approved, merged.
 
 3. After the PR is merged:
 
