@@ -40,7 +40,7 @@ After preparing the module (or modules) for reuse, you must create a PR to add i
 
 3. Wait. The PR will be reviewed and, once approved, merged.
 
-3. After the PR is merged:
+4. After the PR is merged:
 
    * Update your book to point to the module. For more information, see [Reusing a shared module](#reusing-a-shared-module).
    * If necessary, notify other Middleware writers about the shared module so that others can use it.
