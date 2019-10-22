@@ -82,14 +82,14 @@ To reuse a shared module by using a remote include:
    include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
    ```   
 
-3. From the `mw-shared-modules` directory, run `getRemote.sh` to resolve the remote includes and create a new assembly with all of the content.
+3. Run `getRemote.sh` to resolve the remote includes and create a new assembly with all of the content.
 
    This script uses `asciidoc-coalescer` to process the assembly in which you added the remote include to the shared module(s), resolves the include directives, and creates a separate AsciiDoc file with all of the content.
 
-   For example, this command coalesces the content in `my-assembly.adoc` and creates a new assembly in the same directory that can be processed by CCS tooling (`my-assembly-combined.adoc`):
+   For example, this command coalesces the content in `my-assembly.adoc` and creates a new combined assembly in the same directory (`my-assembly-combined.adoc`):
 
    ```
-   mw-shared-modules/scripts/getRemote.sh ~/repos/myrepo/my-assembly.adoc
+   mw-shared-modules/scripts/getRemote.sh my-assembly.adoc
    ```
 
    **NOTE:** Do not edit the combined assembly. If you need to make changes, edit the original assembly and then use `getRemote.sh` to re-create the combined assembly.
