@@ -1,0 +1,66 @@
+// Module included in the following:
+//
+// @bhardesty - Using AMQ Interconnect
+//
+// Attributes used:
+
+// {ProductName}
+// {ProductLongName}
+// {ProductCategory}
+
+
+[[using_your_subscription]]
+= Using your subscription
+
+{ProductName} is provided through a software subscription. To manage
+your subscriptions, access your account at the Red Hat Customer
+Portal.
+
+[discrete]
+== Accessing your account
+
+. Go to link:https://access.redhat.com[access.redhat.com^].
+. If you do not already have an account, create one.
+. Log in to your account.
+
+[discrete]
+== Activating a subscription
+
+. Go to link:https://access.redhat.com[access.redhat.com^].
+. Navigate to *My Subscriptions*.
+. Navigate to *Activate a subscription* and enter your 16-digit
+  activation number.
+
+[discrete]
+== Downloading ZIP and TAR files
+
+To access ZIP or TAR files, use the customer portal to find the
+relevant files for download. If you are using RPM packages, this step
+is not required.
+
+. Open a browser and log in to the Red Hat Customer Portal *Product
+  Downloads* page at
+  link:https://access.redhat.com/downloads[access.redhat.com/downloads^].
+
+. Locate the *{ProductLongName}* entries in the *{ProductCategory}* category.
+
+. Select the desired {ProductName} product.  The *Software Downloads*
+  page opens.
+
+. Click the *Download* link for your component.
+
+[discrete]
+== Registering your system for packages
+
+To install RPM packages on Red Hat Enterprise Linux, your system must
+be registered. If you are using ZIP or TAR files, this step is not
+required.
+
+. Go to link:https://access.redhat.com[access.redhat.com^].
+. Navigate to *Registration Assistant*.
+. Select your OS version and continue to the next page.
+. Use the listed command in your system terminal to complete the
+  registration.
+
+To learn more see https://access.redhat.com/solutions/253273[How to
+Register and Subscribe a System to the Red Hat Customer Portal].

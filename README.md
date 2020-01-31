@@ -13,39 +13,37 @@ You can share either a single module, or a set of modules that can (or should) b
 
 Before you can share a module, you must prepare it for reuse. This ensures that anyone can quickly see who is using the module, and where they are using it. That way, if the module ever needs to be updated, you can notify the writers whose publications will be affected by the change.
 
-* In the module, add a comment at the top indicating your GitHub user name and the book in which the module is used. For example:
+* In the module, add a comment at the top indicating:
+
+  * Your GitHub user name and the book in which the module is used.
+  * Any attributes that are used.
+
+  For example:
 
    ```
    // Module included in the following:
    //
-   // @bhardesty - Deploying AMQ Interconnect on OpenShift
+   // @bhardesty - Using AMQ Interconnect
+   //
+   // Attributes used:
+
+   // {ProductName}
+   // {ProductLongName}
+   // {ProductCategory}
   ```
 
 ### Creating a PR to add shared modules
 
 After preparing the module (or modules) for reuse, you must create a PR to add it to the `mw-shared-modules/modules/` directory in this repository.
 
-1. If you are sharing a set of modules (as opposed to a single module):
+1. Create a PR to add the module.
 
-    a. In the `mw-shared-modules/modules/` directory, add a new directory for your set of modules. For an example, see `mw-shared-modules/modules/prometheus/`.
+2. Wait. The PR will be reviewed and, once approved, merged.
 
-    b. Add your modules to the directory that you created.
-
-    c. Add a `README.md` file and describe how the set of modules should be used.
-
-      * List any attributes that the modules use.
-      * Describe how the modules should be included. At a minimum, define the order in which the modules should be included.
-
-2. Create a PR to add the module.
-
-3. Wait. The PR will be reviewed and, once approved, merged.
-
-4. After the PR is merged:
+3. After the PR is merged:
 
    * Update your book to point to the module. For more information, see [Reusing a shared module](#reusing-a-shared-module).
    * If necessary, notify other Middleware writers about the shared module so that others can use it.
-
-TODO: describe how to share a module that includes images
 
 ## Updating a shared module
 
@@ -63,7 +61,7 @@ While there are many possible ways to reuse a shared module stored in this repo,
 
 A remote include is an AsciiDoc include directive in which the target points to a URL. By using a remote include, you can reuse any of the shared modules stored in this repo by referencing the URL of the module. You do not need to clone this repo or copy any files.
 
-However, using remote includes does present a limitation: Asciidoctor only enables remote includes when running in lower security modes than what CCS tooling requires. Therefore, to use a remote include to include a shared module in your assembly, you must perform an extra step to coalesce the content from the assembly into a second AsciiDoc file, which can then be processed properly by CCS tooling.
+However, remote includes present a limitation: Asciidoctor only enables remote includes when running in lower security modes than what CCS tooling requires. Therefore, to use a remote include to include a shared module in your assembly, you must perform an extra step to coalesce the content from the assembly into a second AsciiDoc file, which can then be processed properly by CCS tooling.
 
 To reuse a shared module by using a remote include:
 
