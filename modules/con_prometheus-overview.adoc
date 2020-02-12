@@ -1,0 +1,43 @@
+// Module included in the following:
+//
+// @mflinn - Red Hat Integration repo - Monitoring Red Hat Integration (prometheus)
+
+
+[id='prometheus-overview']
+= About Prometheus
+
+https://prometheus.io[Prometheus] is an open-source systems and service monitoring and alerting toolkit that you can use to monitor services that are deployed in your Red Hat OpenShift environment. Prometheus collects and stores metrics from configured services at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if a specified condition becomes true.
+
+[IMPORTANT]
+====
+Red Hat support for Prometheus is limited to the setup and configuration recommendations provided in Red Hat product documentation.
+====
+
+If you want to monitor OpenShift services, you must configure each service to expose an endpoint to Prometheus format. This endpoint is an HTTP interface that provides a list of metrics and the current values of the metrics. Prometheus periodically scrapes each target-defined endpoint and writes the collected data into its database. Prometheus gathers data over an extended time, rather than just for the currently running session. Prometheus stores the data so that you can graphically visualize and run queries on the data.
+
+In the Prometheus web interface, you can write queries in https://prometheus.io/docs/prometheus/latest/querying/basics/[Prometheus Query Language (PromQL)] to select and aggregate the collected data.
+
+For example, you can use the following query to select all of the values that Prometheus has recorded within the last five minutes for all time-series data that have `http_requests_total` as the metric name:
+----
+http_requests_total[5m]
+----
+
+To further define or filter the results of the query, specify a label (a `key:value` pair) for the metric. For example, you can use the following query to select all the values that Prometheus has recorded within the last five minutes for all time-series data that have the metric name `http_requests_total` and a job label set to `integration`:
+----
+http_requests_total{job="integration"}[5m]
+----
+
+You can specify how Prometheus handles the result of a query:
+
+* View Prometheus data as tabular data in Prometheus’s expression browser.
+* Consume Prometheus data by external systems through the https://prometheus.io/docs/prometheus/latest/querying/api/[Prometheus HTTP API].
+* Display Prometheus data in a graph.
++
+Prometheus provides a default graphical view of the data that it collects. If you prefer a more robust graphical dashboard to view Prometheus data, Grafana is a popular choice.
++
+[NOTE]
+====
+Grafana is a community-supported feature. Deploying Grafana to monitor Red Hat products is not supported with Red Hat production service level agreements (SLAs).
+====
+
+You can also use the PromQL language to configure alerts in https://prometheus.io/docs/alerting/alertmanager/[Prometheus’s Alertmanager tool].
