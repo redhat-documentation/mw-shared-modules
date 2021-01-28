@@ -7,6 +7,11 @@
 
 You can add metering labels to your {ProductName} pods and check Red Hat subscription details with the OpenShift Metering Operator.
 
+[NOTE]
+====
+Do not add metering labels to any pods that an operator deploys and manages.
+====
+
 {ProductName} can use the following metering labels:
 
 * `com.redhat.component-name: {component-name}`
@@ -14,11 +19,6 @@ You can add metering labels to your {ProductName} pods and check Red Hat subscri
 * `com.redhat.component-version: {component-version}`
 * `com.redhat.product-name: {product-name}`
 * `com.redhat.product-version: {product-version}`
-
-[NOTE]
-====
-If you use an operator to deploy and manage {ProductName} pods, you should not manually add metering labels to those pods.
-====
 
 [role="_additional-resources"]
 .Additional resources
