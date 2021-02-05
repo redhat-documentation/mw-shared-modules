@@ -1,6 +1,7 @@
 // Module included in the following:
 //
 // @bhardesty - Using AMQ Interconnect
+// @smccarthy-ie - Getting Started with Service Registry
 //
 // Attributes used:
 
