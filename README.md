@@ -95,3 +95,14 @@ To reuse a shared module by using a remote include:
 4. To use the assembly in your book, include the combined assembly in your book's `master.adoc` file.
 
    **NOTE:** You must include the combined assembly that was created by `getRemote.sh`, *not* the original assembly in which you added the remote include.
+   
+5. Add a comment at the top of the reused module with your GitHub user name and the book in which the module is reused. For example:
+
+   ```
+   // Module included in the following:
+   //
+   // @bhardesty - Using AMQ Interconnect
+   // @smccarthy-ie - Getting Started with Service Registry
+   //
+   ...
+   ```
