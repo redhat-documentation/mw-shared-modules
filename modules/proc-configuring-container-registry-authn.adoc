@@ -49,7 +49,7 @@ secret/PULL_SECRET_NAME created
 +
 [IMPORTANT]
 ====
-You must create this pull secret in every OpenShift project namespace that will authenticate to `registry.redhat.io`.
+You must create this `docker-registry` secret in every OpenShift project namespace that will authenticate to `registry.redhat.io`.
 ====
 +
 
