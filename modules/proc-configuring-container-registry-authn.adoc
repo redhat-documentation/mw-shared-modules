@@ -25,7 +25,7 @@ You must configure authentication with `registry.redhat.io` before you can deplo
 $ oc login --user system:admin --token=my-token --server=https://my-cluster.example.com:6443
 ----
 
-. Open the project in which you want to deploy {ProductName}, for example:
+. Open the project in which you want to deploy {ProductName}
 +
 ----
 $ oc project myproject
