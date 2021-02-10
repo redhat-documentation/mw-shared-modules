@@ -9,23 +9,24 @@
 
 
 [id="configuring-container-registry-authn_{context}"]
-= Configuring authentication with registry.redhat.io
+= Authenticating with Red Hat for container images
 
-You must configure authentication with `registry.redhat.io` before you can deploy {ProductName} container images on OpenShift.
+[role="_abstract"]
+Configure authentication with `registry.redhat.io` before you can deploy {ProductName} container images on OpenShift.
 
 .Prerequisites
-* Have cluster administrator access to an OpenShift Container Platform cluster.  
-* Have the OpenShift `oc` client tool installed. For more details, see the link:https://docs.openshift.com/container-platform/{OCPVersion}/cli_reference/openshift_cli/getting-started-cli.html[OpenShift CLI documentation]. 
+* Cluster administrator access to an OpenShift Container Platform cluster.  
+* OpenShift `oc` client tool is installed. For more details, see the link:https://docs.openshift.com/container-platform/{OCPVersion}/cli_reference/openshift_cli/getting-started-cli.html[OpenShift CLI documentation]. 
 
 .Procedure
 
-. Log into your OpenShift cluster as administrator
+. Log into your OpenShift cluster as administrator:
 +
 ----
 $ oc login --user system:admin --token=my-token --server=https://my-cluster.example.com:6443
 ----
 
-. Open the project in which you want to deploy {ProductName}
+. Open the project in which you want to deploy {ProductName}:
 +
 ----
 $ oc project myproject
@@ -59,9 +60,9 @@ You must create this `docker-registry` secret in every OpenShift project namespa
 $ oc secrets link default PULL_SECRET_NAME --for=pull
 ----
 +
-The service account name must match the name that the service account pod uses.
+The service account name must match the name that the OpenShift pod uses.
 
-. Link the secret to the `builder` service account in the namespace in which you will deploy the images: 
+. Link the secret to the `builder` service account to use the secret for pushing and pulling build images: 
 +
 ----
 $ oc secrets link builder PULL_SECRET_NAME
@@ -69,6 +70,9 @@ $ oc secrets link builder PULL_SECRET_NAME
 +
 NOTE: If you do not want to use your Red Hat username and password to create the pull secret, you can create an authentication token using a registry service account.
 
+[role="_additional-resources"]
 .Additional resources
+For more details on authenticating with Red Hat for container images:
+
 * https://access.redhat.com/RegistryAuthentication[Red Hat container image authentication]
 * https://access.redhat.com/terms-based-registry/[Red Hat registry service accounts]
