@@ -14,7 +14,7 @@
 You must configure authentication with `registry.redhat.io` before you can deploy {ProductName} container images on OpenShift.
 
 .Prerequisites
-* You must have cluster administrator access to an OpenShift Container Platform cluster.  
+* Have cluster administrator access to an OpenShift Container Platform cluster.  
 * You must have the OpenShift `oc` client tool installed. For more details, see the link:https://docs.openshift.com/container-platform/{OCPVersion}/cli_reference/openshift_cli/getting-started-cli.html[OpenShift CLI documentation]. 
 
 .Procedure
