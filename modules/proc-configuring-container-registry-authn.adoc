@@ -9,7 +9,7 @@
 
 
 [id="configuring-container-registry-authn_{context}"]
-= Authenticating with Red Hat for container images
+= Authenticating with registry.redhat.io for container images
 
 [role="_abstract"]
 Configure authentication with `registry.redhat.io` before you can deploy {ProductName} container images on OpenShift.
@@ -22,18 +22,21 @@ Configure authentication with `registry.redhat.io` before you can deploy {Produc
 
 . Log into your OpenShift cluster as administrator:
 +
+[source,sh,options="nowrap"]
 ----
 $ oc login --user system:admin --token=my-token --server=https://my-cluster.example.com:6443
 ----
 
 . Open the project in which you want to deploy {ProductName}:
 +
+[source,sh,options="nowrap"]
 ----
 $ oc project myproject
 ----
 
 . Create a `docker-registry` secret using your Red Hat Customer Portal account, replacing `PULL_SECRET_NAME` with the secret to create:
 +
+[source,sh,options="nowrap"]
 ----
 $ oc create secret docker-registry PULL_SECRET_NAME \
   --docker-server=registry.redhat.io \
@@ -44,6 +47,7 @@ $ oc create secret docker-registry PULL_SECRET_NAME \
 +
 You should see the following output:
 +
+[source,sh,options="nowrap"]
 ----
 secret/PULL_SECRET_NAME created
 ----
@@ -52,10 +56,10 @@ secret/PULL_SECRET_NAME created
 ====
 You must create this `docker-registry` secret in every OpenShift project namespace that will authenticate to `registry.redhat.io`.
 ====
-+
 
 . Link the secret to your service account to use the secret for pulling images. The following example uses the `default` service account:
 +
+[source,sh,options="nowrap"]
 ----
 $ oc secrets link default PULL_SECRET_NAME --for=pull
 ----
@@ -64,6 +68,7 @@ The service account name must match the name that the OpenShift pod uses.
 
 . Link the secret to the `builder` service account to use the secret for pushing and pulling build images: 
 +
+[source,sh,options="nowrap"]
 ----
 $ oc secrets link builder PULL_SECRET_NAME
 ----
