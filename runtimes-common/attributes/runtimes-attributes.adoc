@@ -35,7 +35,7 @@
 
 :component-type: application
 :product-name: "Red_Hat_Runtimes"
-:product-version: 2020/Q2
+:product-version: 2020-Q2
 
 //
 //Links
