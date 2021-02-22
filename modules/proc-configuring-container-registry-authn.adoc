@@ -1,0 +1,83 @@
+// Module included in the following:
+//
+// @smccarthy-ie - Getting Started with Camel Kafka Connector
+//
+// Attributes used:
+//
+// {ProductName}
+// {OCPVersion}
+
+
+[id="configuring-container-registry-authn_{context}"]
+= Authenticating with registry.redhat.io for container images
+
+[role="_abstract"]
+Configure authentication with `registry.redhat.io` before you can deploy {ProductName} container images on OpenShift.
+
+.Prerequisites
+* Cluster administrator access to an OpenShift Container Platform cluster.  
+* OpenShift `oc` client tool is installed. For more details, see the link:https://docs.openshift.com/container-platform/{OCPVersion}/cli_reference/openshift_cli/getting-started-cli.html[OpenShift CLI documentation]. 
+
+.Procedure
+
+. Log into your OpenShift cluster as administrator:
++
+[source,sh,options="nowrap"]
+----
+$ oc login --user system:admin --token=my-token --server=https://my-cluster.example.com:6443
+----
+
+. Open the project in which you want to deploy {ProductName}:
++
+[source,sh,options="nowrap"]
+----
+$ oc project myproject
+----
+
+. Create a `docker-registry` secret using your Red Hat Customer Portal account, replacing `PULL_SECRET_NAME` with the secret to create:
++
+[source,sh,options="nowrap"]
+----
+$ oc create secret docker-registry PULL_SECRET_NAME \
+  --docker-server=registry.redhat.io \
+  --docker-username=CUSTOMER_PORTAL_USERNAME \ 
+  --docker-password=CUSTOMER_PORTAL_PASSWORD \
+  --docker-email=EMAIL_ADDRESS  
+----
++
+You should see the following output:
++
+[source,sh,options="nowrap"]
+----
+secret/PULL_SECRET_NAME created
+----
++
+[IMPORTANT]
+====
+You must create this `docker-registry` secret in every OpenShift project namespace that will authenticate to `registry.redhat.io`.
+====
+
+. Link the secret to your service account to use the secret for pulling images. The following example uses the `default` service account:
++
+[source,sh,options="nowrap"]
+----
+$ oc secrets link default PULL_SECRET_NAME --for=pull
+----
++
+The service account name must match the name that the OpenShift pod uses.
+
+. Link the secret to the `builder` service account to use the secret for pushing and pulling build images: 
++
+[source,sh,options="nowrap"]
+----
+$ oc secrets link builder PULL_SECRET_NAME
+----
++
+NOTE: If you do not want to use your Red Hat username and password to create the pull secret, you can create an authentication token using a registry service account.
+
+[role="_additional-resources"]
+.Additional resources
+For more details on authenticating with Red Hat for container images:
+
+* https://access.redhat.com/RegistryAuthentication[Red Hat container image authentication]
+* https://access.redhat.com/terms-based-registry/[Red Hat registry service accounts]
