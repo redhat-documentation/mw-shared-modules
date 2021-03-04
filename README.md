@@ -59,13 +59,15 @@ Making a change to a shared module impacts every book in which the module is use
 
 While there are many possible ways to reuse a shared module stored in this repo, this procedure describes one particular method that uses *remote includes*.
 
+  **NOTE:**  On a Mac OS laptop, the script for remote includes might not work. Use an alternative way to reuse the shared module - such as copying it to your repo.
+
 A remote include is an AsciiDoc include directive in which the target points to a URL. By using a remote include, you can reuse any of the shared modules stored in this repo by referencing the URL of the module. You do not need to clone this repo or copy any files.
 
 However, remote includes present a limitation: Asciidoctor only enables remote includes when running in lower security modes than what CCS tooling requires. Therefore, to use a remote include to include a shared module in your assembly, you must perform an extra step to coalesce the content from the assembly into a second AsciiDoc file, which can then be processed properly by CCS tooling.
 
 To reuse a shared module by using a remote include:
 
-1. In the assembly in which the module should be used, include the module using the URL of the module's location. For example, to point to the _What operators are_ module:
+1. In the assembly in which the module should be used, include the module using the URL of the module's *raw* location. For example, to point to the _What operators are_ module:
 
    ```
    include::https://raw.githubusercontent.com/redhat-documentation/mw-shared-modules/master/modules/what-operators-are.adoc[leveloffset=+1]
