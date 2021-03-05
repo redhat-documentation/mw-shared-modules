@@ -1,6 +1,9 @@
 // Module included in the following:
 //
 // @smccarthy-ie - Getting Started with Camel Kafka Connector
+// @mflinn - fuse7 repo - copied to docs/shared folder
+//    - used by Fuse on OpenShift and Installing Fuse Online guides
+//    - if there any updates to this shared module - copy and replace the file in the fuse7 repo's docs/shared folder
 //
 // Attributes used:
 //
