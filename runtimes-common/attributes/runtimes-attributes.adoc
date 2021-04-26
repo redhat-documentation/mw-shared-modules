@@ -2,6 +2,9 @@
 // This file contains attributes for Red Hat Runtimes product docs.
 //
 
+:runtimes-long: Red Hat Runtimes
+:runtimes-short: Runtimes
+
 //
 //Metering labels: product specific
 //
