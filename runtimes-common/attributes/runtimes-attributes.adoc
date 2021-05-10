@@ -17,6 +17,9 @@
 :jws-long: Red Hat JBoss Web Server
 :jws-short: JBoss Web Server
 
+:runtimes-rhbq-long: Red Hat build of Quarkus
+:runtimes-rhbq-short: Quarkus
+
 //
 // RHDG and JWS session externalization
 //
