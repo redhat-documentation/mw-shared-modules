@@ -10,12 +10,17 @@
 //
 
 // Each Runtimes product needs a unique name attribute for shared content.
+// When you write shared content, use the following attributes instead of product name attributes specific to your project.
+// These attributes ensure that correct product names are substituted in shared content sets.
 
-:rhdg-long: Red Hat Data Grid
-:rhdg-short: Data Grid
+:runtimes-datagrid-long: Red Hat Data Grid
+:runtimes-datagrid-short: Data Grid
 
-:jws-long: Red Hat JBoss Web Server
-:jws-short: JBoss Web Server
+:runtimes-webserver-long: Red Hat JBoss Web Server
+:runtimes-webserver-short: JBoss Web Server
+
+:runtimes-quarkus-long: Red Hat build of Quarkus
+:runtimes-quarkus-short: Quarkus
 
 //
 // RHDG and JWS session externalization
