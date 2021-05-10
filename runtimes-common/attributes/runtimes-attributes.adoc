@@ -10,7 +10,8 @@
 //
 
 // Each Runtimes product needs a unique name attribute for shared content.
-// When you write shared content, use the following attributes instead of the regular product name attributes of your project to ensure that correct product names are substituted when you reuse content across different documentation sets. 
+// When you write shared content, use the following attributes instead of product name attributes specific to your project. 
+// These attributes ensure that correct product names are substituted in shared content sets. 
 
 :rhdg-long: Red Hat Data Grid
 :rhdg-short: Data Grid
