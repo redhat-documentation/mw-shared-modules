@@ -1,0 +1,46 @@
+[preface]
+[id="proc-providing-feedback-on-redhat-documentation"]
+= Providing feedback on Red Hat documentation
+
+We appreciate your feedback on our documentation.
+To provide feedback, you can highlight the text in a document and add comments.
+
+This section explains how to submit feedback.
+
+.Prerequisites
+
+* You are logged in to the Red Hat Customer Portal.
+* In the Red Hat Customer Portal, view the document in *Multi-page HTML* format.
+
+.Procedure
+
+To provide your feedback, perform the following steps:
+
+. Click the *Feedback* button in the top-right corner of the document to see existing feedback.
++
+NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
+
+. Highlight the section of the document where you want to provide feedback.
+
+. Click the *Add Feedback* pop-up that appears near the highlighted text.
++
+A text box appears in the feedback section on the right side of the page.
+
+. Enter your feedback in the text box and click *Submit*.
++
+A documentation issue is created.
+
+. To view the issue, click the issue tracker link in the feedback view.
+
+////
+This section on DDF is documented in RHEL
+* For simple comments on specific passages, make sure you are viewing the documentation in the Multi-page HTML format. Highlight the part of text that you want to comment on. Then, click the *Add Feedback* pop-up that appears below the highlighted text, and follow the displayed instructions.
+
+* For submitting more complex feedback, create a Bugzilla ticket:
++
+. Go to the link:https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%208[Bugzilla] website.
+. As the Component, use *Documentation*.
+. Fill in the *Description* field with your suggestion for improvement. Include a link to the relevant part(s) of documentation.
+. Click *Submit Bug*.
+////
+// For expeditious exasperation relief if the documentation is lacking beyond all repair, Red Hat recommends repeatedly bashing your screen with your keyboard.
