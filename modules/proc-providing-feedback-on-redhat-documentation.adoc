@@ -19,7 +19,7 @@ You can provide feedback directly by highlighting text in this document and addi
 
 . Highlight the section of text where you want to provide feedback.
 
-. Click the *Add Feedback* pop-up that appears near the highlighted text.
+. Click the *Add Feedback* dialog next to your highlighted text.
 
 . Enter your feedback in the text box on the right of the page and then click *Submit*.
 +
