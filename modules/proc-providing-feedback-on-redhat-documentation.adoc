@@ -25,9 +25,7 @@ NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 
 . Enter your feedback in the text box on the right of the page and then click *Submit*.
 +
-A documentation issue is created.
-
-. To view the issue, click the issue tracker link in the feedback view.
+When you submit your feedback, it creates a new documentation issue so you can track progress.
 
 ////
 This section on DDF is documented in RHEL
