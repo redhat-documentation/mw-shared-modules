@@ -15,7 +15,7 @@ To provide feedback, you can highlight the text in a document and add comments.
 
 To provide your feedback, perform the following steps:
 
-. Click the *Feedback* button in the top-right corner of the document to see existing feedback.
+. Click the *Feedback* button at the top-right of the document.
 +
 NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 
