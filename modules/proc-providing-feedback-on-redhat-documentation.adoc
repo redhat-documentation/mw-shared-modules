@@ -16,7 +16,6 @@ You can provide feedback directly by highlighting text in this document and addi
 
 . Click the *Feedback* button at the top-right of the document.
 +
-NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 
 . Highlight the section of the document where you want to provide feedback.
 
