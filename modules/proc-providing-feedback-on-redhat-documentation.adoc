@@ -22,8 +22,6 @@ NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 . Highlight the section of the document where you want to provide feedback.
 
 . Click the *Add Feedback* pop-up that appears near the highlighted text.
-+
-A text box appears in the feedback section on the right side of the page.
 
 . Enter your feedback in the text box and click *Submit*.
 +
