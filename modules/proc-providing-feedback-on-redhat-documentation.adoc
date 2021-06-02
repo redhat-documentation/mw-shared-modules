@@ -23,7 +23,7 @@ NOTE: The feedback feature is enabled only in the *Multi-page HTML* format.
 
 . Click the *Add Feedback* pop-up that appears near the highlighted text.
 
-. Enter your feedback in the text box and click *Submit*.
+. Enter your feedback in the text box on the right of the page and then click *Submit*.
 +
 A documentation issue is created.
 
