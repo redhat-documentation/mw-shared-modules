@@ -3,7 +3,7 @@
 = Providing feedback on Red Hat documentation
 
 We value and appreciate your feedback to improve our documentation.
-To provide feedback, you can highlight the text in a document and add comments.
+You can provide feedback directly by highlighting text in this document and adding comments.
 
 
 .Prerequisites
