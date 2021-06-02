@@ -13,7 +13,6 @@ You can provide feedback directly by highlighting text in this document and addi
 
 .Procedure
 
-To provide your feedback, perform the following steps:
 
 . Click the *Feedback* button at the top-right of the document.
 +
