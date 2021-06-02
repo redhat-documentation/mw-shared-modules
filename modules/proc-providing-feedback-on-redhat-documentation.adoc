@@ -2,7 +2,7 @@
 [id="proc-providing-feedback-on-redhat-documentation_{context}"]
 = Providing feedback on Red Hat documentation
 
-We appreciate your feedback on our documentation.
+We value and appreciate your feedback to improve our documentation.
 To provide feedback, you can highlight the text in a document and add comments.
 
 This section explains how to submit feedback.
