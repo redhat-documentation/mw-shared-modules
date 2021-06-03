@@ -17,4 +17,7 @@ You can provide feedback directly by highlighting text in this document and addi
 . Click the *Add Feedback* dialog next to your highlighted text.
 . Enter your feedback in the text box on the right of the page and then click *Submit*.
 +
-When you submit your feedback, it creates a new documentation issue so you can track progress.
+We automatically create a documentation issue each time you submit feedback. 
+Open the tracking link that displays after you click *Submit* and start watching the issue or add more comments.
+
+And thanks! We value your comments and insights to improve our docs.
