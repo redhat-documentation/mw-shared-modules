@@ -7,8 +7,8 @@ You can provide feedback directly by highlighting text in this document and addi
 
 .Prerequisites
 
-* You are logged in to the Red Hat Customer Portal.
-* In the Red Hat Customer Portal, view the document in *Multi-page HTML* format.
+* Log in to the Red Hat Customer Portal.
+* Select the *Multi-page HTML* format.
 
 .Procedure
 
