@@ -20,6 +20,6 @@ To submit documentation feedback from the customer portal, do the following:
 . Enter your feedback in the text box on the right of the page and then click *Submit*.
 
 We automatically create a tracking issue each time you submit feedback.
-Open the link that displays after you click *Submit* and start watching the issue or add more comments.
+Open the link that is displayed after you click *Submit* and start watching the issue or add more comments.
 
 Thank you for the valuable feedback.
