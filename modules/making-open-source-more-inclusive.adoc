@@ -1,4 +1,4 @@
-[preface]
+//[preface]
 
 [id="making-open-source-more-inclusive_{context}"]
 = Making open source more inclusive
