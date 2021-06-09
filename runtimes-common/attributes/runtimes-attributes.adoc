@@ -22,6 +22,9 @@
 :runtimes-quarkus-long: Red Hat build of Quarkus
 :runtimes-quarkus-short: Quarkus
 
+:runtimes-openjdk-long: Red Hat build of OpenJDK
+:runtimes-openjdk-short: OpenJDK
+
 //
 // RHDG and JWS session externalization
 //
