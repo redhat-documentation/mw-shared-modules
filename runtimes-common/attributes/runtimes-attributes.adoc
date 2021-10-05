@@ -44,16 +44,21 @@
 //:component-version: x.y.z
 
 //Define the component name.
-//:component-name: "Data_Grid"
-//:component-name: "Vert.X"
-//:component-name: "EAP"
-//:component-name: "JBoss_Web_Server"
-//:component-name: "SSO"
-//:component-name: "AMQ_Broker"
-//:component-name: "Quarkus"
-//:component-name: "Spring_Boot"
-//:component-name: "Thorntail"
-//:component-name: "Node.js"
+//:component-name: Data_Grid
+//:component-name: Vert.X
+//:component-name: EAP
+//:component-name: JBoss_Web_Server
+//:component-name: SSO
+//:component-name: AMQ_Broker
+//:component-name: Quarkus
+//:component-name: Spring_Boot
+//:component-name: Thorntail
+//:component-name: Node.js
+
+//Define the subcomponent name if applicable.
+//:sub-component-name: Tomcat <major_version>
+//:sub-component-name: SSO Server
+//:sub-component-name: <leave_blank>
 
 //Be sure ProductName resolves if you don't already define it.
 //:ProductName: Data Grid
@@ -65,8 +70,8 @@
 //These metering labels apply to all Runtimes products. Do not change them.
 
 :component-type: application
-:product-name: "Red_Hat_Runtimes"
-:product-version: 2021-Q1
+:product-name: Red_Hat_Runtimes
+:product-version: YYYY-Q1
 
 //
 //Links
