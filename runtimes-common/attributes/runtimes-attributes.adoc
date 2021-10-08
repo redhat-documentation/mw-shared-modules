@@ -57,7 +57,7 @@
 
 //Define the subcomponent name if applicable.
 //:sub-component-name: Tomcat <major_version>
-//:sub-component-name: SSO Server
+//:sub-component-name: SSO_Server
 //:sub-component-name: <leave_blank>
 
 //Be sure ProductName resolves if you don't already define it.
