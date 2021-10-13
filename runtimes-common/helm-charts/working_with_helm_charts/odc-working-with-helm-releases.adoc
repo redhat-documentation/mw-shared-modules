@@ -1,0 +1,19 @@
+[id="odc-working-with-helm-releases"]
+= Working with Helm releases
+include::../includes/common-attributes.adoc[]
+:context: working-with-helm-releases
+
+
+
+You can use the *Developer* perspective in the web console to upgrade, rollback, or uninstall a Helm release.
+
+
+== Prerequisites
+
+* You have logged in to the web console and have switched to the link:https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html-single/web_console/#odc-about-developer-perspective[*Developer* perspective].
+
+include::../includes/odc-upgrading-helm-release.adoc[leveloffset=+1]
+
+include::../includes/odc-rolling-back-helm-release.adoc[leveloffset=+1]
+
+include::../includes/odc-uninstalling-helm-release.adoc[leveloffset=+1]
