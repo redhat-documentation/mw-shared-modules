@@ -1,0 +1,33 @@
+[id='hotrodmanager-configuration-properties_{context}']
+= `HotRodManager` configuration properties
+
+|===
+|Property |Description
+
+|`configurationName`
+|Specifies a {runtimes-datagrid-short} cache instance. Your application then creates a cache instance that uses the configuration from the named cache.
+
+|`persistenceStrategy`
+|Defines how sessions map to entries in the cache.
+
+`COARSE` stores all attributes of a session in a single cache entry. This is the default.
+
+`FINE` stores session attributes in separate cache entries.
+
+|`maxActiveSessions`
+|Defines the maximum number of sessions to store in the cache. The default is no maximum (limitless).
+|===
+
+To configure Hot Rod clients, specify properties without the `infinispan.client.hotrod.` prefix.
+
+You can also specify common attributes for the Session Manager.
+Refer to the appropriate version of the Apache Tomcat documentation for more information.
+
+[role="_additional-resources"]
+.Additional resources
+
+* link:{rhdg_hotrod_client_api_url}[Hot Rod Client Configuration API]
+* link:https://tomcat.apache.org/tomcat-7.0-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 7.0 Manager]
+* link:https://tomcat.apache.org/tomcat-8.0-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 8.0 Manager]
+* link:https://tomcat.apache.org/tomcat-8.5-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 8.5 Manager]
+* link:https://tomcat.apache.org/tomcat-9.0-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 9.0 Manager]

@@ -1,0 +1,8 @@
+[id='installing-session-client_{context}']
+= Installing the session client
+Install the Tomcat session client to externalize HTTP sessions from {runtimes-webserver-short} applications to {runtimes-datagrid-short}.
+
+.Procedure
+
+. Download the `{tomcat_session_client}` archive from the link:{rhdg_download_url}[{runtimes-datagrid-short} Software Downloads].
+. Copy the contents of the `lib/` directory from the archive into `$CATALINA_HOME`.

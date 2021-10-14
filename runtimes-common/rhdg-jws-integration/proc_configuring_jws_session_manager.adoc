@@ -1,0 +1,19 @@
+[id='configuring-session-manager_{context}']
+= Configuring the session manager
+Configure the `HotRodManager` class for the Session Manager.
+
+.Procedure
+
+. Open either `$CATALINA_HOME/conf/context.xml` or `/WEB-INF/context.xml` for editing.
+. Specify the `HotRodManager` class for the Session Manager and define configuration as appropriate.
+. Save and close `context.xml`.
+
+.Example Configuration
+[source,xml,options="nowrap",subs=attributes+]
+----
+<Manager className="org.wildfly.clustering.tomcat.hotrod.HotRodManager"
+         configurationName="mycache"
+         persistenceStrategy="FINE"
+         maxActiveSessions="100"
+         server_list="127.0.0.1:11222;127.0.0.1:11223;127.0.0.1:11224"/>
+----
