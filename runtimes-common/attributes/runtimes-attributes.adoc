@@ -6,6 +6,12 @@
 :runtimes-short: Runtimes
 
 //
+// Include shared link attributes
+//
+
+include::links.adoc[]
+
+//
 // Cross-product naming attributes
 //
 
@@ -72,9 +78,3 @@
 :component-type: application
 :product-name: Red_Hat_Runtimes
 :product-version: YYYY-Q1
-
-//
-//Links
-//
-
-:metering-doc-root: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/metering/index
