@@ -9,7 +9,9 @@
 // Include shared link attributes
 //
 
-include::links.adoc[]
+:metering-doc-root: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.6/html/metering/index
+
+:redhat-tech-previews: https://access.redhat.com/support/offerings/techpreview/[Red Hat Technology Preview Features Support Scope]
 
 //
 // Cross-product naming attributes
