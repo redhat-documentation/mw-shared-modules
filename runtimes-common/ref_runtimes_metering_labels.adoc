@@ -9,6 +9,11 @@ You can add metering labels to your {ProductName} pods and check Red Hat subscri
 
 [NOTE]
 ====
+The OpenShift Metering Operator is not available in OpenShift version 4.9 and later.
+====
+
+[NOTE]
+====
 Do not add metering labels to any pods that an operator or a template deploys and manages.
 ====
 
