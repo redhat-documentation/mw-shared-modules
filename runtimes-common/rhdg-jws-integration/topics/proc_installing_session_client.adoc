@@ -1,0 +1,17 @@
+[id='installing-session-client_{context}']
+= Installing the Tomcat session client
+
+Install the Tomcat session client to externalize HTTP sessions from {tomcat_long} applications to {infinispan_long}.
+
+.Procedure
+
+//Community content
+ifdef::community[]
+* Follow the instructions in the project link:{project_readme}[README] to build and install the Tomcat session client.
+endif::community[]
+//Downstream content
+ifdef::downstream[]
+. Download the `{tomcat_session_client}` archive from the link:{rhdg_download_url}[{runtimes-datagrid-short} Software Downloads].
+. Extract the archive to your filesystem.
+. Copy the contents of the `lib/` directory from the extracted archive into `$CATALINA_HOME/lib`.
+endif::downstream[]

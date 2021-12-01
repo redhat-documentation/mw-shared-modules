@@ -1,0 +1,19 @@
+//
+// Conditional statements
+//
+:downstream:
+
+//
+// Project names
+//
+:tomcat_long: Red Hat JBoss Web Server
+:tomcat_short: JBoss Web Server
+:infinispan_long: Red Hat Data Grid
+:infinispan_short: Data Grid
+:tomcat_session_client: redhat-datagrid-8.1.1-tomcat<$version>-session-client.zip
+
+//
+// Links
+//
+:rhdg_download_url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=data.grid&downloadType=distributions
+:infinispan_docs: https://access.redhat.com/documentation/en-us/red_hat_data_grid/

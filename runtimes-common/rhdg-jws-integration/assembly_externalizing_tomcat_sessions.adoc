@@ -1,12 +1,13 @@
 ifdef::context[:parent-context: {context}]
-[id='jws-session-externalization']
-:context: rhdg
-= Externalizing HTTP sessions from {runtimes-webserver-long} to {runtimes-datagrid-long}
-Externalize HTTP sessions from {runtimes-webserver-short} to {runtimes-datagrid-short} via the Apache Tomcat `org.apache.catalina.Manager` interface.
+[id='tomcat-session-externalization']
+:context: tomcat-session-externalization
+= Externalizing HTTP sessions from {tomcat_long} to {infinispan_long}
 
-include::proc_installing_jws_session_client.adoc[leveloffset=+1]
-include::proc_configuring_jws_session_manager.adoc[leveloffset=+1]
-include::ref_hotrodmanager_configuration_properties.adoc[leveloffset=+1]
+Achieve high availability by externalizing HTTP session data from {tomcat_short} deployments to {infinispan_short} Server clusters through the `org.apache.catalina.Manager` interface.
+
+include::{topics}/proc_installing_session_client.adoc[leveloffset=+1]
+include::{topics}/proc_configuring_session_manager.adoc[leveloffset=+1]
+include::{topics}/ref_hotrodmanager_configuration_properties.adoc[leveloffset=+2]
 
 // Restore the parent context.
 ifdef::parent-context[:context: {parent-context}]

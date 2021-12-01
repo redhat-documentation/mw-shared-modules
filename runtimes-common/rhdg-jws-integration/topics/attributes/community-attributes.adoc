@@ -1,0 +1,18 @@
+//
+// Conditional statements
+//
+:community:
+
+//
+// Project names
+//
+:tomcat_long: Apache Tomcat
+:tomcat_short: Tomcat
+:infinispan_long: Infinispan
+:infinispan_short: Infinispan
+
+//
+// Links
+//
+:project_readme: https://github.com/wildfly-clustering/wildfly-clustering-tomcat/blob/main/README.md
+:infinispan_docs: https://infinispan.org/documentation/

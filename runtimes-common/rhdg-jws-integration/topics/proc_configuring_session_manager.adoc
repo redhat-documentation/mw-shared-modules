@@ -1,0 +1,44 @@
+[id='configuring-session-manager_{context}']
+= Configuring the session manager
+
+Configure the `HotRodManager` class for the session manager to define how the Tomcat session client connects to {infinispan_long} Server and stores data in remote caches.
+
+.Prerequisites
+
+* Install the Tomcat session client.
+* Install at least one {infinispan_short} Server instance.
+* Create a cache on {infinispan_short} Server to use as a template for storing HTTP session data.
+
+.Procedure
+
+. Open either `$CATALINA_HOME/conf/context.xml` or `/WEB-INF/context.xml` for editing.
+. Specify `org.wildfly.clustering.tomcat.hotrod.HotRodManager` as the value for the `className` property.
+. Specify the name of the cache to use as a template with the `configurationName` property.
+. Define any other configuration properties for the `HotRodManager` class as appropriate.
+. Set Hot Rod client configuration properties without the `infinispan.client.hotrod.` prefix.
+.. Specify the list of {infinispan_short} Server nodes with the `server_list` property.
+.. Specify {infinispan_short} credentials with the `auth_username` and `auth_password` properties.
+. Specify common attributes for the Tomcat session manager as required.
+. Save and close `context.xml`.
+
+.Configuration example
+[source,xml,options="nowrap",subs=attributes+]
+----
+<Manager className="org.wildfly.clustering.tomcat.hotrod.HotRodManager"
+         configurationName="mycache"
+         persistenceStrategy="FINE"
+         maxActiveSessions="100"
+         server_list="192.0.2.0:11222;192.0.2.0:11223;192.0.2.0:11224"
+         auth_username="admin"
+         auth_password="changeme"/>
+----
+
+.Verification
+
+To verify that the Tomcat session client stores data in remote caches, do the following:
+
+. Open the {infinispan_short} Console in any browser.
++
+By default the console is available at `\http://127.0.0.1:11222/console/`.
++
+. Check that the Tomcat session client has created caches for each deployed application.

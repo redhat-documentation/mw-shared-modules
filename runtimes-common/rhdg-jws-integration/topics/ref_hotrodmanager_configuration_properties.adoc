@@ -1,11 +1,17 @@
 [id='hotrodmanager-configuration-properties_{context}']
-= `HotRodManager` configuration properties
+= Hot Rod manager configuration properties
 
+The following table lists and describes configuration properties for the `HotRodManager` class:
+
+[%autowidth,%noheader,cols="1,1",stripes=even]
 |===
 |Property |Description
 
+|`className`
+|Specifies `org.wildfly.clustering.tomcat.hotrod.HotRodManager` as the session manager.
+
 |`configurationName`
-|Specifies a {runtimes-datagrid-short} cache instance. Your application then creates a cache instance that uses the configuration from the named cache.
+|Specifies a remote cache on {infinispan_short} Server to use as a template for storing HTTP session data.
 
 |`persistenceStrategy`
 |Defines how sessions map to entries in the cache.
@@ -18,15 +24,9 @@
 |Defines the maximum number of sessions to store in the cache. The default is no maximum (limitless).
 |===
 
-To configure Hot Rod clients, specify properties without the `infinispan.client.hotrod.` prefix.
-
-You can also specify common attributes for the Session Manager.
-Refer to the appropriate version of the Apache Tomcat documentation for more information.
-
 [role="_additional-resources"]
 .Additional resources
-
-* link:{rhdg_hotrod_client_api_url}[Hot Rod Client Configuration API]
+* link:{infinispan_docs}[{infinispan_short} documentation]
 * link:https://tomcat.apache.org/tomcat-7.0-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 7.0 Manager]
 * link:https://tomcat.apache.org/tomcat-8.0-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 8.0 Manager]
 * link:https://tomcat.apache.org/tomcat-8.5-doc/config/cluster-manager.html#Common_Attributes[Common Attributes for Tomcat 8.5 Manager]
