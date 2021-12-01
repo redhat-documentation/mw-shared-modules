@@ -34,14 +34,6 @@
 :runtimes-openjdk-short: OpenJDK
 
 //
-// RHDG and JWS session externalization
-//
-
-:tomcat_session_client: redhat-datagrid-8.2.0.Final-tomcat<$version>-session-client.zip
-:rhdg_download_url: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=data.grid&downloadType=distributions
-:rhdg_hotrod_client_api_url: https://access.redhat.com/webassets/avalon/d/red-hat-data-grid/8.2/api/org/infinispan/client/hotrod/configuration/package-summary.html#package.description
-
-//
 //Metering labels: product specific
 //
 
