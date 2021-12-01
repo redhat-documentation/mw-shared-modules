@@ -1,4 +1,4 @@
-include::topics/attributes/downstream-attributes.adoc
+include::topics/attributes/downstream-attributes.adoc[]
 ifdef::context[:parent-context: {context}]
 [id='tomcat-session-externalization']
 :context: tomcat-session-externalization
