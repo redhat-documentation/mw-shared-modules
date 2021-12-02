@@ -29,8 +29,12 @@ Configure the `HotRodManager` class for the session manager to define how the To
          persistenceStrategy="FINE"
          maxActiveSessions="100"
          server_list="192.0.2.0:11222;192.0.2.0:11223;192.0.2.0:11224"
+         protocol_version="2.9"
          auth_username="admin"
-         auth_password="changeme"/>
+         auth_password="changeme"
+         auth_realm="default"
+         sasl_mechanism="DIGEST-MD5"
+         auth_server_name="infinispan"/>
 ----
 
 .Verification
