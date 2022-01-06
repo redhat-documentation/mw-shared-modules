@@ -9,7 +9,8 @@ You can add metering labels to your {ProductName} pods and check Red Hat subscri
 
 [NOTE]
 ====
-Do not add metering labels to any pods that an operator or a template deploys and manages.
+* Do not add metering labels to any pods that an operator or a template deploys and manages.
+* You can apply labels to pods using the Metering Operator on OpenShift Container Platform version 4.8 and earlier. From version 4.9 onward, the Metering Operator is no longer available without a direct replacement.
 ====
 
 {ProductName} can use the following metering labels:
