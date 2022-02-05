@@ -1,6 +1,5 @@
+:_content-type: ASSEMBLY
 [id="configuring-custom-helm-chart-repositories"]
-
-[[configuring-custom-helm-chart-repositories-1]]
 = Configuring custom Helm chart repositories
 include::../includes/common-attributes.adoc[]
 :context: configuring-custom-helm-chart-repositories
